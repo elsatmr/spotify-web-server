@@ -1,0 +1,63 @@
+[
+  {
+    "type": "song",
+    "id": "monolog",
+    "name": "At The Restaurant",
+    "albumName": "Groene Vingers",
+    "artistName": "Monolog Rockstars",
+    "artwork": "https://freemusicarchive.org/image?file=image%2FwVmbtnZJr702stj5IL4JckxMf47oje2IpENABxsZ.png&width=290&height=290&type=image",
+    "genreNames": ["Jazz", "Rock", "Garage"],
+    "url": "./songs/Monolog Rockstars - At The Restaurant.mp3"
+  },
+  {
+    "type": "album",
+    "id": "monolog",
+    "name": "Groene Vingers",
+    "artistName": "Monolog Rockstars",
+    "artwork": "https://freemusicarchive.org/image?file=image%2FwVmbtnZJr702stj5IL4JckxMf47oje2IpENABxsZ.png&width=290&height=290&type=image",
+    "genreNames": ["Jazz", "Rock", "Garage"]
+  },
+  {
+    "type": "artist",
+    "id": "monolog",
+    "name": "Monolog Rockstars",
+    "artwork": "https://freemusicarchive.org/image?file=image%2FwVmbtnZJr702stj5IL4JckxMf47oje2IpENABxsZ.png&width=290&height=290&type=image"
+  },
+  {
+    "type": "show",
+    "id": "monolog",
+    "name": "Monochella",
+    "artwork": "https://freemusicarchive.org/image?file=image%2FwVmbtnZJr702stj5IL4JckxMf47oje2IpENABxsZ.png&width=290&height=290&type=image"
+  },
+
+  {
+    "type": "song",
+    "id": "phoenix",
+    "name": "Trying To Be Cool",
+    "albumName": "Bankrupt!",
+    "artistName": "Phoenix",
+    "artwork": "https://upload.wikimedia.org/wikipedia/en/9/98/Phoenix_-_Bankrupt%21_cover.png",
+    "genreNames": ["Synth-Pop", "Indie"],
+    "url": "./songs/Phoenix - Trying to be cool.mp3"
+  },
+  {
+    "type": "album",
+    "id": "phoenix",
+    "name": "Bankrupt!",
+    "artistName": "Phoenix",
+    "artwork": "https://upload.wikimedia.org/wikipedia/en/9/98/Phoenix_-_Bankrupt%21_cover.png",
+    "genreNames": ["Synth-Pop", "Indie"]
+  },
+  {
+    "type": "artist",
+    "id": "phoenix",
+    "name": "Phoenix",
+    "artwork": "https://upload.wikimedia.org/wikipedia/en/9/98/Phoenix_-_Bankrupt%21_cover.png"
+  },
+  {
+    "type": "show",
+    "id": "phoenix",
+    "name": "Phoenix Live Tour 2022",
+    "artwork": "https://upload.wikimedia.org/wikipedia/en/9/98/Phoenix_-_Bankrupt%21_cover.png"
+  }
+]
