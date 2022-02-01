@@ -6,10 +6,17 @@ dotenv.config();
 
 const clientID = process.env.SPOTIFY_CLIENTID || '';
 const clientSecret = process.env.SPOTIFY_CLIENTSECRET || '';
+
+const encode = (str: string): string =>
+  Buffer.from(str, 'binary').toString('base64');
+
+export const encodedClientIDSecret = encode(clientID + ':' + clientSecret);
+
 const scope: string = 'user-read-private';
 
 enum URLS {
   DEV = 'http://localhost:3000/',
+  SEARCH = 'http://localhost:3000/search',
 }
 
 export enum Methods {
@@ -17,17 +24,4 @@ export enum Methods {
   POST = 'POST',
   PUT = 'PUT',
   DELETE = 'DELETE',
-}
-
-let authURLObjects = {
-  response_type: 'token',
-  client_id: clientID,
-  scope: scope,
-  redirect_uri: URLS.DEV,
-};
-
-export async function authUser(urlObjects = authURLObjects) {
-  const url =
-    'https://accounts.spotify.com/authorize?' +
-    querystring.stringify(urlObjects);
 }

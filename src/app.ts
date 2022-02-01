@@ -1,20 +1,25 @@
 import express, { Request, Response } from 'express';
 import SearchController from './controllers/Search.controller';
+import AuthController from './controllers/AuthController';
 
 const app = express();
-const searchRouter = express.Router();
-const testRouter = express.Router();
+const router = express.Router();
 
-searchRouter.get(
-  '/api/v1/auth/search/:searchTerm',
-  SearchController.getSearchResult
+router.get('/api/v1/search/:searchTerm', SearchController.getSearchResult);
+
+router.get('/api/v1/auth/login/:authCode', AuthController.getAccessToken);
+
+router.get(
+  '/api/v1/auth/refresh/:refreshToken',
+  AuthController.getRefreshToken
 );
 
 app.use(express.json());
 app.get('/', (req: Request, res: Response) => {
   res.status(200).send('Hello World!');
 });
-app.use(searchRouter);
+
+app.use(router);
 
 app.get('/songs/Phoenix-TTBC.mp3', (req: Request, res: Response) => {
   res.status(200).download('./songs/Phoenix-TTBC.mp3');

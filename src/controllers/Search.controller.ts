@@ -1,7 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
 import BaseController from './Base.controller';
-import axios, { AxiosResponse } from 'axios';
-import { authUser } from '../utils/Spotify.util';
 import filejs from '../../searchfiles.json';
 
 class Search extends BaseController {
