@@ -5,7 +5,10 @@ import AuthController from './controllers/AuthController';
 const app = express();
 const router = express.Router();
 
-router.get('/api/v1/search/:searchTerm', SearchController.getSearchResult);
+router.get(
+  '/api/v1/search/:searchTerm/:accessToken',
+  SearchController.getSearchResult
+);
 
 router.get('/api/v1/auth/login/:authCode', AuthController.getAccessToken);
 
