@@ -30,7 +30,6 @@ class Auth extends BaseController {
         };
 
         const res: AxiosResponse = await axios.post(tokenURL, null, config);
-        console.log(res);
         return {
           data: res.data,
         };
@@ -64,7 +63,6 @@ class Auth extends BaseController {
         };
 
         const res: AxiosResponse = await axios.post(tokenURL, null, config);
-        console.log(res);
         return {
           data: res.data,
         };

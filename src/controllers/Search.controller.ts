@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
+import e, { Request, Response, NextFunction } from 'express';
 import BaseController from './Base.controller';
 import querystring from 'query-string';
 import axios, { AxiosResponse } from 'axios';
@@ -12,25 +12,24 @@ class Search extends BaseController {
     return this.makeRequest(
       async () => {
         const urlBody = {
-          q: req.params.searchTerm,
-          type: 'track,artist,album,show',
-          limit: 5,
-          include_external: 'audio',
+          query: req.params.searchTerm,
+          type: 'album,show,track,artist',
+          limit: 10,
         };
 
         const config = {
           headers: {
-            Authorization: req.params.accessToken,
+            Authorization: `Bearer ` + req.params.accessToken,
             'Content-Type': `application/json`,
           },
         };
 
         const searchURL =
-          `https://api.spotify.com/v1/search` + querystring.stringify(urlBody);
+          `https://api.spotify.com/v1/search?` + querystring.stringify(urlBody);
 
-        const res: AxiosResponse = await axios.post(searchURL, null, config);
+        console.log(searchURL);
 
-        console.log(res.data);
+        const res: AxiosResponse = await axios.get(searchURL, config);
 
         return {
           data: res.data,
